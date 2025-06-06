@@ -134,11 +134,23 @@
   overflow-wrap: break-word;
 }
 
-.markdown-content code {
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
+  .markdown-content code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Table styling for markdown content */
+  .markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .markdown-content th,
+  .markdown-content td {
+    border: 1px solid #ffffff;
+    padding: 2px;
+  }
 
 /* Ensure proper spacing in markdown content */
 .markdown-content .katex-display {
