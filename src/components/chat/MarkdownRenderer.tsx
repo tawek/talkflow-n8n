@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
 import { CodeBlock } from './CodeBlock';
 import { LaTeXBlock } from './LaTeXBlock';
 import 'katex/dist/katex.min.css';
@@ -51,7 +52,7 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) =
   return (
     <ReactMarkdown
       remarkPlugins={[remarkMath]}
-      rehypePlugins={[rehypeKatex]}
+      rehypePlugins={[rehypeRaw, rehypeKatex]}
       components={components}
       className="prose dark:prose-invert max-w-none"
     >
